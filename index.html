@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chereddy Mahigeethika - Portfolio</title>
+    <!-- package to import font icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> 
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .theme-toggle {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#toggle {
+    display: none;
+}
+
+.toggle-label {
+    position: relative;
+    display: inline-block;
+    width: 5.5rem;
+    height: 2.8rem;
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    border-radius: 2.8rem;
+    cursor: pointer;
+    box-shadow: 
+        0 0 10px rgba(0, 0, 0, 0.1),
+        inset 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Dark mode styles for the toggle */
+.dark-mode .toggle-label {
+    background: linear-gradient(145deg, #2c3e50, #34495e);
+    box-shadow: 
+        0 0 10px rgba(0, 0, 0, 0.3),
+        inset 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-label i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.4rem;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+    transition: all 0.3s ease;
+}
+
+.toggle-label .fa-sun {
+    left: 0.8rem;
+    color: #f39c12;
+    opacity: 0.8;
+}
+
+.toggle-label .fa-moon {
+    right: 0.8rem;
+    color: #f1c40f;
+    opacity: 0.6;
+}
+
+/* Icon states in dark mode */
+.dark-mode .toggle-label .fa-sun {
+    opacity: 0.6;
+}
+
+.dark-mode .toggle-label .fa-moon {
+    opacity: 0.9;
+}
+
+.ball {
+    position: absolute;
+    top: 0.4rem;
+    left: 0.4rem;
+    width: 2rem;
+    height: 2rem;
+    background: linear-gradient(145deg, #ffffff, #f5f5f5);
+    border-radius: 50%;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    box-shadow: 
+        0 2px 5px rgba(0, 0, 0, 0.2),
+        inset 0 -2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+/* Ball in dark mode */
+.dark-mode .ball {
+    background: linear-gradient(145deg, #4a6fa5, #3a5a8a);
+    box-shadow: 
+        0 2px 5px rgba(0, 0, 0, 0.3),
+        inset 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#toggle:checked + .toggle-label .ball {
+    transform: translateX(2.7rem);
+}
+
+/* For a smooth dark mode transition */
+body {
+    transition: background-color 0.5s ease, color 0.3s ease;
+}
+
+/* Dark mode body styles */
+.dark-mode {
+    --bg-color: #1a1a2e;
+    --text-color: #f8f8f8;
+    --shadow-color: #aef1f3;
+    --main-color: #4a6fa5;
+}
+
+.dark-mode .mobile-toggle {
+    background: var(--mobile-toggle-color);
+}
+
+/* Subtle glow effect when hovering */
+.toggle-label:hover {
+    box-shadow: 
+        0 0 15px rgba(0, 0, 0, 0.15),
+        inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .toggle-label:hover {
+    box-shadow: 
+        0 0 15px rgba(0, 0, 0, 0.4),
+        inset 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <button class="mobile-toggle" aria-label="Menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div href="#home" class="logo"><img src="images/logo.jpg" width="70px" height="70px" ></div>
+        <nav class="nav-menu">
+            <ul>
+               <li><a href="#home">Home</a></li>
+               <li><a href="#about">About</a></li>
+               <li><a href="#skills">Skills</a></li>
+               <li><a href="#certificates">Certificates</a></li>
+               <li><a href="#projects">Projects</a></li>
+               <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="theme-toggle">
+            <input type="checkbox" id="toggle">
+            <label for="toggle" class="toggle-label">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+                <span class="ball"></span>
+            </label>
+        </div>
+    </header>
+    <!-- Home Section -->
+    <section id="home" class="home">
+        <div class="home-content">
+            <h3>Hello, it's Me</h3>
+            <h1>Chereddy MahiGeethika</h1>
+            <p>I am a Full Stack Developer</p>
+            <div class="social-media">
+                <a href="https://discord.gg/jyquKgsv" target="_blank"><i class="fab fa-discord"></i></a>
+                <a href="https://github.com/maggie-369" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/geethika3236/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/mahigeethika-chereddy-a33231368/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <a href="images/Resume Mrecw.pdf" class="btn" target="_blank">Download Resume</a>
+        </div>
+        <div class="home-img">
+            <img src="images/profile.jpg" alt="Profile Image">
+        </div>
+    </section>
+
+<!--About Section -->
+<section id="about" class="about">
+    <div class="about-img">
+        <img src="images/profile.jpg" alt="Full Stack Developer">
+    </div>
+    <div class="about-content">
+        <h2 class="heading">About <span>Me</span></h2>
+        <h3>Full Stack Developer</h3>
+        <p>I'm Chereddy MahiGeethika, a passionate Full Stack Developer with expertise in both frontend and backend technologies...</p>
+        
+        <div class="button-group">  <!-- New container for buttons -->
+            <details class="more-details">
+                <summary class="read-more-btn">Read More</summary>
+                <div class="additional-content">
+                    <h4>Technical Skills</h4>
+                    <ul class="skills-list">
+                        <li><strong>Frontend:</strong> React.js, Angular, Vue.js, HTML5, CSS3/Sass, JavaScript/TypeScript</li>
+                        <li><strong>Backend:</strong> Node.js, Express, Python/Django, Java/Spring Boot</li>
+                        <li><strong>Databases:</strong> MongoDB, PostgreSQL, MySQL</li>
+                        <li><strong>DevOps:</strong> Docker, AWS, CI/CD pipelines</li>
+                    </ul>
+                    
+                    <h4>Professional Approach</h4>
+                    <p>I follow agile methodologies to deliver clean, maintainable code with comprehensive testing (Jest, Mocha, Selenium). My solutions prioritize performance optimization, security best practices, and seamless user experiences across all devices.</p>
+                    
+                    <h4>Current Focus</h4>
+                    <p>Currently expanding my expertise in cloud-native architectures and microservices while completing my B.Tech in Computer Science with AI/ML specialization. I actively contribute to open-source projects and participate in hackathons to solve real-world problems.</p>
+                </div>
+            </details>
+            <a href="#contact" class="btn">Let's Collaborate</a>
+        </div>
+    </div>
+</section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <h2 class="heading">My <span>Skills</span></h2>
+        <div class="skills-container">
+            <div class="skills-box">
+                <h3>HTML/CSS</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 90%;"><span>90%</span></div>
+                </div>
+            </div>
+            <div class="skills-box">
+                <h3>JavaScript</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 80%;"><span>80%</span></div>
+                </div>
+            </div>
+            <div class="skills-box">
+                <h3>MERN Stack</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 75%;"><span>75%</span></div>
+                </div>
+            </div>
+            <div class="skills-box">
+                <h3>C++</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 85%;"><span>85%</span></div>
+                </div>
+            </div>
+            <div class="skills-box">
+                <h3>Data Structures & Algorithm</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 90%;"><span>90%</span></div>
+                </div>
+            </div>
+            <div class="skills-box">
+                <h3>Java</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 80%;"><span>80%</span></div>
+                </div>
+            </div>
+            <div class="skills-box">
+                <h3>DBMS</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 85%;"><span>85%</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="certificates">
+        <h2 class="heading">My <span>Relevant certifications</span></h2>
+        <div class="certificates-container">
+            <div class="certificate-box">
+                <img src="images/cert1.jpg" alt="Certificate 1">
+                <h3>HTML Certification</h3>
+                <p>This certificatoin is provided by SoloLearn Website</p>
+                <a href="certificates/cert1.jpg" class="btn" target="_blank">View Certificate</a>
+            </div>
+            <div class="certificate-box">
+                <img src="images/cert2.jpg" alt="Certificate 2">
+                <h3>CSS Certification</h3>
+                <p>This certification is provied by SoloLearn Website</p>
+                <a href="certificates/cert2.jpg" class="btn" target="_blank">View Certificate</a>
+            </div>
+            <div class="certificate-box">
+                <img src="images/cert3.jpg" alt="Certificate 3">
+                <h3>Python Certification</h3>
+                <p>This certification is provided by Cisco Networking Academy</p>
+                <a href="certificates/cert3.jpg" class="btn" target="_blank">View Certificate</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2 class="heading">My <span>Projects</span></h2>
+        <div class="projects-container">
+            <div class="project-box">
+                <img src="images/project1.jpg" alt="Project 1">
+                <div class="project-layer">
+                    <h4>Personal Profile</h4>
+                    <p>Clean responsive profile page</p>
+                    <a href="project1.html" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="project-box">
+                <img src="images/project2.jpg" alt="Project 2">
+                <div class="project-layer">
+                    <h4>Restaurant Menu</h4>
+                    <p>Static food menu with categories</p>
+                    <a href="project2.html" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="project-box">
+                <img src="images/project3.jpg" alt="Project 3">
+                <div class="project-layer">
+                    <h4>Blog Layout</h4>
+                    <p>Article template with featured image</p>
+                    <a href="project3.html" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="project-box">
+                <img src="images/project4.jpg" alt="Project 4">
+                <div class="project-layer">
+                    <h4>Product Landing Page</h4>
+                    <p>Responsive product showcase page</p>
+                    <a href="project4.html" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="project-box">
+                <img src="images/project5.jpg" alt="Project 5">
+                <div class="project-layer">
+                    <h4>Photo Gallery</h4>
+                    <p>CSS Grid layout with Images</p>
+                    <a href="project5.html" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="project-box">
+                <img src="images/project6.jpg" alt="Project 6">
+                <div class="project-layer">
+                    <h4>FAQ Accordion</h4>
+                    <p>collapsible Questions</p>
+                    <a href="project6.html" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 class="heading">Contact <span>Me!</span></h2>
+        <form action="mailto:mahigeethika12@gmail.com" method = "post" method ="get" enctype="text/plain">
+          <div class="input-box">
+            <input type="text" name="firstName" placeholder="First Name" required>
+            <input type="text" name="lastName" placeholder="Last Name">
+          </div>
+          <div class="input-box">
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="tel" name="phone" placeholder="Mobile Number">
+          </div>
+          <textarea name="message" cols="30" rows="10" placeholder="Write Your Query" required></textarea>
+          <input type="submit" value="Send Message" class="btn">
+        </form>
+      </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <div class="social-media">
+                <a href="https://discord.gg/jyquKgsv" target="_blank"><i class="fab fa-discord"></i></a>
+                <a href="https://github.com/maggie-369" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/geethika3236/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/mahigeethika-chereddy-a33231368/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="footer-text">
+            <p>Copyright &copy; 2025 by Chereddy MahiGeethika | All Rights Reserved.</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#home"><i class="fas fa-arrow-up"></i></a>
+        </div>
+        <div class="footer-contact">
+            <a href="tel:+1234567890" class="contact-button call-button">
+              
+              <span class="btn"><i class="fas fa-phone-alt"></i> +91 8341074174</span>
+            </a>
+            
+            <a href="mailto:info@example.com" class="contact-button email-button">
+              
+              <span class="btn"><i class="fas fa-paper-plane"></i> mahigeethika12@gmail.com</span>
+            </a>
+          </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const toggleButton = document.querySelector('.mobile-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+  
+        toggleButton.addEventListener('click', function() {
+        // Toggle active state
+        this.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    
+        // Update aria-expanded attribute
+        const isExpanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !isExpanded);
+        });
+        });
+        const toggle = document.getElementById('toggle');
+        const body = document.body;
+
+        // Check for saved user preference or use system preference
+        const savedTheme = localStorage.getItem('theme') || 
+                         (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        
+        // Applied to the saved theme
+        if (savedTheme === 'dark') {
+            body.classList.add('dark-mode');
+            toggle.checked = true;
+        }
+
+        // Toggle theme on switch click
+        toggle.addEventListener('change', function() {
+            if (this.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // Listen for system theme changes
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+            const newTheme = e.matches ? 'dark' : 'light';
+            body.classList.toggle('dark-mode', e.matches);
+            toggle.checked = e.matches;
+            localStorage.setItem('theme', newTheme);
+        });
+    </script>
+</body>
+</html>

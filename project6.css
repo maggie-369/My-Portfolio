@@ -1,0 +1,114 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 20px;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.faq-container h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2c3e50;
+    font-size: 2.5rem;
+}
+
+/* Accordion Styles */
+.accordion {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-item {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.accordion-item:last-child {
+    border-bottom: none;
+}
+
+.accordion-input {
+    display: none;
+}
+
+.accordion-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: white;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.accordion-label:hover {
+    background: #f5f5f5;
+}
+
+.accordion-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #2c3e50;
+}
+
+.accordion-icon {
+    transition: transform 0.3s ease;
+    color: #7f8c8d;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    background: white;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.accordion-content p {
+    padding: 0 20px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Accordion Functionality */
+.accordion-input:checked ~ .accordion-label {
+    background: #f5f5f5;
+}
+
+.accordion-input:checked ~ .accordion-label .accordion-icon {
+    transform: rotate(180deg);
+}
+
+.accordion-input:checked ~ .accordion-content {
+    max-height: 300px;
+    padding: 0 20px 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .faq-container h1 {
+        font-size: 2rem;
+    }
+    
+    .accordion-label {
+        padding: 15px;
+    }
+    
+    .accordion-title {
+        font-size: 1rem;
+    }
+}
